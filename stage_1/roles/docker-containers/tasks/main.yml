@@ -16,10 +16,10 @@
 
 - name: Copy docker-compose file from repo to folder
   ansible.builtin.template:
-    src: "../docker-compose.yml"
-    dest: "../docker-compose.yml"
+    src: "../../../docker-compose.yml"
+    dest: "../../../docker-compose.yml"
 
 - name: Start containers
   shell: "docker-compose up -d"
   args:
-    chdir: "../"
+    chdir: "../../../"
