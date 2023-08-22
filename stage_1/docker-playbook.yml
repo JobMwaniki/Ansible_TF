@@ -1,0 +1,8 @@
+---
+- name: Configure Docker and run containers
+  hosts: all  # Update with appropriate target hosts
+  gather_facts: false
+
+  roles:
+    - docker-installation
+    - docker-containers
