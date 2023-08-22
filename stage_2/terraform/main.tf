@@ -64,7 +64,7 @@ resource "aws_instance" "the_instance" {
   #ass
   provisioner "local-exec" {
     command = <<-EOT
-      echo "host1 ansible_host=${aws_instance.the_instance.public_dns}" >> /etc/ansible/hosts
+      echo "host_1 ansible_host=${aws_instance.the_instance.public_dns}" >> /etc/ansible/hosts
     EOT
   }
 
