@@ -2,6 +2,10 @@
 - name: Configure Docker and run containers
   hosts: all  # Update with appropriate target hosts
   gather_facts: false
+  vars:
+    client_image: mwaniki21/client:v1.0.0
+    backend_image: mwaniki21/backend:v1.0.0
+    app_folder: /opt/yolo
 
   roles:
     - docker-installation
